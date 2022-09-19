@@ -1,0 +1,12 @@
+<!--plantillas/detalle_publicaciones.html-->
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="entrada-publicacion">
+        <h2>{{publicacion.titulo}}</h2>
+        <p>{{publicacion.pk}}</p>
+        <p>{{publicacion.cuerpo}}</p>
+    </div>
+
+{% endblock content %}
