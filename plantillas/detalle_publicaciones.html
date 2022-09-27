@@ -5,8 +5,17 @@
 
     <div class="entrada-publicacion">
         <h2>{{publicacion.titulo}}</h2>
-        <p>{{publicacion.pk}}</p>
+        <!-- <p>{{publicacion.pk}}</p> -->
         <p>{{publicacion.cuerpo}}</p>
     </div>
+
+    <p>
+        <a href="{% url 'editar_publicacion' publicacion.pk %}">Editar publicacion del Blog</a>
+    </p> 
+    
+    <p>
+        <a href="{% url 'eliminar_publicacion' publicacion.pk %}">Eliminar publicacion del Blog</a>
+    </p>
+
 
 {% endblock content %}

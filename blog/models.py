@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Publicaciones(models.Model):
@@ -13,3 +14,6 @@ class Publicaciones(models.Model):
         return self.titulo
 
     #define como es la tabla, makegritations genera el codigo sql, se ejecuta ese codigo con migrate
+
+    def get_absolute_url(self):
+        return reverse('detalle_pub', args=[str(self.id)]);

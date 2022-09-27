@@ -1,0 +1,16 @@
+<!--plantillas/editar_publicacion.html-->
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Eliminar publicacion</h1>
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <p>¿Está completamente seguro de que desea eliminar "{{publicacion.titulo}}"?</p>
+
+        <input type="submit" value="Confirmar eliminacion">
+    </form>
+
+{% endblock content %}
