@@ -1,0 +1,14 @@
+<!--plantillas/registration/registro_usuario.html-->
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>
+    Registro de usuario
+</h2>
+<form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">registrame</button>
+</form>
+
+{% endblock content %}
